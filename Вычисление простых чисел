@@ -1,0 +1,14 @@
+def main():
+    n = input("Введите число: ")
+    d = 2
+    y = n-1
+    while d<n:
+        x= n%d
+        d +=1
+        if x == 0:
+            print "Это непростое число"
+            break
+        else:
+            print "это простое число"
+            break
+main()
