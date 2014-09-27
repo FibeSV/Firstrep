@@ -1,0 +1,10 @@
+def Interest(balance,rate):
+    newbalance=balance*(1+rate)
+    balance=newbalance
+    return balance
+def main():
+    balance=1000
+    rate=0.05
+    b=Interest(balance,rate)
+    print b
+main()
