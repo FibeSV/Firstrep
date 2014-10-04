@@ -1,0 +1,42 @@
+from graphics import *
+def main():
+    win=GraphWin("Patrick",1000,300)
+    p1=Point(50,10)
+    p2=Point(100,60)
+    p3=Point(10,60)
+    p4=Point(140,110)
+    p5=Point(120,110)
+    p6=Point(30,110)
+    kobina=Rectangle(p3,p4)
+    kobina.draw(win)
+    kobina.setFill('red')
+    okno=Rectangle(p1,p2)
+    okno.draw(win)
+    okno.setFill('grey')
+    k1=Circle(p5,20)
+    k2=Circle(p6,20)
+    k1.draw(win)
+    k2.draw(win)
+    k1.setFill('black')
+    k2.setFill('black')
+    win.getMouse()
+    y=1
+    while y<10000:
+        if y>=1000:
+            okno.move(-1,0)
+            kobina.move(-1,0)
+            k1.move(-1,0)
+            k2.move(-1,0)
+        elif y>=2000:
+            y=1
+        else:
+            okno.move(1,0)
+            kobina.move(1,0)
+            k1.move(1,0)
+            k2.move(1,0)
+        y+=1
+        time.sleep(0.0005)
+    win.getMouse
+main()
+    
+  
