@@ -1,0 +1,33 @@
+from graphics import*
+import time
+def main():
+    win=GraphWin("Patrick",1000,300)
+    p1=Point(50,10)
+    p2=Point(100,60)
+    p3=Point(10,60)
+    p4=Point(140,110)
+    p5=Point(120,110)
+    p6=Point(30,110)
+    kobina=Rectangle(p3,p4)
+    kobina.draw(win)
+    kobina.setFill('red')
+    okno=Rectangle(p1,p2)
+    okno.draw(win)
+    okno.setFill('grey')
+    k1=Circle(p5,20)
+    k2=Circle(p6,20)
+    k1.draw(win)
+    k2.draw(win)
+    k1.setFill('black')
+    k2.setFill('black')
+    f=[okno,kobina,k1,k2]
+    moveallonline(f,5,0,46,0.05)
+    moveallonline(f,-5,0,46,0.05)
+def moveallonline(shapelist,dx,dy,reps,delay):
+    for i in range(reps):
+        moveall(shapelist,dx,dy)
+        time.sleep(delay)
+def moveall(shapelist,dx,dy):
+    for i in shapelist:
+        i.move(dx,dy)
+main()
